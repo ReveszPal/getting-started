@@ -1,0 +1,194 @@
+Pals-MacBook-Pro:PROGRESS TRACKING reveszpal$ cd /Volumes/Backup/reveszpal/XcodeProjects/LT-XcodeHelp/FoodTrackerObjC/FoodTracker
+Pals-MacBook-Pro:FoodTracker reveszpal$ ls
+FoodTracker             FoodTracker.xcodeproj   FoodTrackerTests
+Pals-MacBook-Pro:FoodTracker reveszpal$ git init
+Initialized empty Git repository in /Volumes/Backup/reveszpal/XcodeProjects/LT-XcodeHelp/FoodTrackerObjC/FoodTracker/.git/
+Pals-MacBook-Pro:FoodTracker reveszpal$ clear
+
+Pals-MacBook-Pro:FoodTracker reveszpal$ ls -la
+total 16
+drwxr-xr-x   7 reveszpal  staff   238 Apr  2 12:36 .
+drwxr-xr-x   4 reveszpal  staff   136 Apr  2 12:32 ..
+-rw-r--r--@  1 reveszpal  staff  6148 Apr  2 12:34 .DS_Store
+drwxr-xr-x  10 reveszpal  staff   340 Apr  2 12:36 .git
+drwxr-xr-x  10 reveszpal  staff   340 Mar 20 11:23 FoodTracker
+drwxr-xr-x   5 reveszpal  staff   170 Mar  2 11:32 FoodTracker.xcodeproj
+drwxr-xr-x   4 reveszpal  staff   136 Mar  2 11:32 FoodTrackerTests
+Pals-MacBook-Pro:FoodTracker reveszpal$ echo "# FoodTracker as sample GitHub project." >> README.md
+Pals-MacBook-Pro:FoodTracker reveszpal$ ls -la
+total 24
+drwxr-xr-x   8 reveszpal  staff   272 Apr  2 12:45 .
+drwxr-xr-x   4 reveszpal  staff   136 Apr  2 12:32 ..
+-rw-r--r--@  1 reveszpal  staff  6148 Apr  2 12:34 .DS_Store
+drwxr-xr-x  10 reveszpal  staff   340 Apr  2 12:36 .git
+drwxr-xr-x  10 reveszpal  staff   340 Mar 20 11:23 FoodTracker
+drwxr-xr-x   5 reveszpal  staff   170 Mar  2 11:32 FoodTracker.xcodeproj
+drwxr-xr-x   4 reveszpal  staff   136 Mar  2 11:32 FoodTrackerTests
+-rw-r--r--   1 reveszpal  staff    40 Apr  2 12:45 README.md
+Pals-MacBook-Pro:FoodTracker reveszpal$ cat README.md 
+# FoodTracker as sample GitHub project.
+Pals-MacBook-Pro:FoodTracker reveszpal$ touch .gitignore
+Pals-MacBook-Pro:FoodTracker reveszpal$ ls -la
+total 24
+drwxr-xr-x   9 reveszpal  staff   306 Apr  2 12:46 .
+drwxr-xr-x   4 reveszpal  staff   136 Apr  2 12:32 ..
+-rw-r--r--@  1 reveszpal  staff  6148 Apr  2 12:34 .DS_Store
+drwxr-xr-x  10 reveszpal  staff   340 Apr  2 12:36 .git
+-rw-r--r--   1 reveszpal  staff     0 Apr  2 12:46 .gitignore
+drwxr-xr-x  10 reveszpal  staff   340 Mar 20 11:23 FoodTracker
+drwxr-xr-x   5 reveszpal  staff   170 Mar  2 11:32 FoodTracker.xcodeproj
+drwxr-xr-x   4 reveszpal  staff   136 Mar  2 11:32 FoodTrackerTests
+-rw-r--r--   1 reveszpal  staff    40 Apr  2 12:45 README.md
+Pals-MacBook-Pro:FoodTracker reveszpal$ pico .gitignore 
+Pals-MacBook-Pro:FoodTracker reveszpal$ cat .gitignore 
+.DS_Store
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+Pals-MacBook-Pro:FoodTracker reveszpal$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        FoodTracker.xcodeproj/
+        FoodTracker/
+        FoodTrackerTests/
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Pals-MacBook-Pro:FoodTracker reveszpal$ git add --all
+Pals-MacBook-Pro:FoodTracker reveszpal$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   FoodTracker.xcodeproj/project.pbxproj
+        new file:   FoodTracker/AppDelegate.h
+        new file:   FoodTracker/AppDelegate.m
+        new file:   FoodTracker/Assets.xcassets/AppIcon.appiconset/Contents.json
+        new file:   FoodTracker/Base.lproj/LaunchScreen.storyboard
+        new file:   FoodTracker/Base.lproj/Main.storyboard
+        new file:   FoodTracker/Info.plist
+        new file:   FoodTracker/ViewController.h
+        new file:   FoodTracker/ViewController.m
+        new file:   FoodTracker/main.m
+        new file:   FoodTrackerTests/FoodTrackerTests.m
+        new file:   FoodTrackerTests/Info.plist
+        new file:   README.md
+
+Pals-MacBook-Pro:FoodTracker reveszpal$ git commit -m "Initial commit."
+[master (root-commit) 491ef66] Initial commit.
+ Committer: Pal James Revesz <reveszpal@Pals-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 14 files changed, 857 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 FoodTracker.xcodeproj/project.pbxproj
+ create mode 100644 FoodTracker/AppDelegate.h
+ create mode 100644 FoodTracker/AppDelegate.m
+ create mode 100644 FoodTracker/Assets.xcassets/AppIcon.appiconset/Contents.json
+ create mode 100644 FoodTracker/Base.lproj/LaunchScreen.storyboard
+ create mode 100644 FoodTracker/Base.lproj/Main.storyboard
+ create mode 100644 FoodTracker/Info.plist
+ create mode 100644 FoodTracker/ViewController.h
+ create mode 100644 FoodTracker/ViewController.m
+ create mode 100644 FoodTracker/main.m
+ create mode 100644 FoodTrackerTests/FoodTrackerTests.m
+ create mode 100644 FoodTrackerTests/Info.plist
+ create mode 100644 README.md
+Pals-MacBook-Pro:FoodTracker reveszpal$ git remote add origin https://github.com/ReveszPal/getting-started.git
+Pals-MacBook-Pro:FoodTracker reveszpal$ git push -u origin master
+Username for 'https://github.com': ReveszPal
+Password for 'https://ReveszPal@github.com': 
+Counting objects: 22, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (22/22), 9.29 KiB | 0 bytes/s, done.
+Total 22 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/ReveszPal/getting-started.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Pals-MacBook-Pro:FoodTracker reveszpal$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Pals-MacBook-Pro:FoodTracker reveszpal$ ls -la
+total 32
+drwxr-xr-x   9 reveszpal  staff   306 Apr  2 12:46 .
+drwxr-xr-x   4 reveszpal  staff   136 Apr  2 12:32 ..
+-rw-r--r--@  1 reveszpal  staff  6148 Apr  2 12:34 .DS_Store
+drwxr-xr-x  13 reveszpal  staff   442 Apr  2 13:16 .git
+-rw-r--r--   1 reveszpal  staff    57 Apr  2 12:50 .gitignore
+drwxr-xr-x  10 reveszpal  staff   340 Mar 20 11:23 FoodTracker
+drwxr-xr-x   5 reveszpal  staff   170 Mar  2 11:32 FoodTracker.xcodeproj
+drwxr-xr-x   4 reveszpal  staff   136 Mar  2 11:32 FoodTrackerTests
+-rw-r--r--   1 reveszpal  staff    40 Apr  2 12:45 README.md
+Pals-MacBook-Pro:FoodTracker reveszpal$ pico README.md 
+Pals-MacBook-Pro:FoodTracker reveszpal$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Pals-MacBook-Pro:FoodTracker reveszpal$ git add README.md 
+Pals-MacBook-Pro:FoodTracker reveszpal$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+Pals-MacBook-Pro:FoodTracker reveszpal$ git commit -m "Updated README.md."
+[master 535bc0b] Updated README.md.
+ Committer: Pal James Revesz <reveszpal@Pals-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+Pals-MacBook-Pro:FoodTracker reveszpal$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/ReveszPal/getting-started.git
+   491ef66..535bc0b  master -> master
+Branch master set up to track remote branch master from origin.
+Pals-MacBook-Pro:FoodTracker reveszpal$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Pals-MacBook-Pro:FoodTracker reveszpal$ 
+
